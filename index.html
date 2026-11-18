@@ -397,6 +397,24 @@
   .price-note a:hover{ text-decoration: underline; }
 
   /* ---------- Stats ---------- */
+
+  /* proof strip (under hero) */
+  .proof-strip{ padding: 26px 0; }
+  .proof-strip .proof-row{ display:flex; justify-content:center; align-items:center; gap: 14px 44px; flex-wrap:wrap; text-align:center; }
+  .proof-strip .proof-item{ display:flex; align-items:baseline; gap:10px; }
+  .proof-strip .proof-label{ font-size:0.88rem; color: var(--ink-soft); }
+  .proof-strip .proof-fig{ font-family:"Shippori Mincho", serif; font-size:1.7rem; color: var(--sage-deep); line-height:1.2; }
+  .proof-strip .proof-fig small{ font-size:0.9rem; margin-left:2px; }
+  .proof-strip .proof-sep{ width:1px; height:26px; background: var(--line); }
+  @media (max-width: 640px){ .proof-strip .proof-sep{ display:none; } .proof-strip .proof-row{ flex-direction:column; gap:8px; } }
+
+  /* price: included list */
+  .included{ max-width: 620px; margin: 30px auto 0; background:#fff; border-radius: 16px; padding: 22px 26px; }
+  .included h3{ margin:0 0 10px; font-size:0.95rem; color: var(--sage-deep); text-align:center; letter-spacing:.05em; }
+  .included ul{ list-style:none; margin:0; padding:0; display:grid; gap:6px; }
+  .included li{ position:relative; padding-left: 1.6em; font-size:0.92rem; color: var(--ink-soft); line-height:1.8; }
+  .included li::before{ content:"✓"; position:absolute; left:0; color: var(--gold); font-weight:700; }
+
   .stats{
     display:grid;
     grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
@@ -599,6 +617,16 @@
   </div>
 </section>
 
+<section class="proof-strip alt" aria-label="演奏実績">
+  <div class="wrap">
+    <div class="proof-row">
+      <div class="proof-item"><span class="proof-label">福祉施設等での演奏実績</span><span class="proof-fig">1,000<small>件以上</small></span></div>
+      <span class="proof-sep"></span>
+      <div class="proof-item"><span class="proof-label">年間演奏件数</span><span class="proof-fig">160<small>件以上</small></span></div>
+    </div>
+  </div>
+</section>
+
 <section id="service">
   <div class="wrap">
     <div class="section-head">
@@ -653,7 +681,7 @@
     <div class="section-head">
       <span class="eyebrow">Price</span>
       <h2>料金プラン</h2>
-      <p>シンプルな時間制の料金体系です。延長も柔軟に対応します。<br>単発のイベントはもちろん、継続してご利用いただきやすい価格を心がけています。</p>
+      <p>シンプルな時間制の料金体系です。延長も柔軟に対応します。<br>実績豊富なプロの演奏を、より多くの方に体験していただきたい。<br>そんな想いから、お求めやすい価格設定にしております。</p>
     </div>
 
     <div class="price-grid">
@@ -673,7 +701,16 @@
         <div class="amount">+¥1,000</div>
       </div>
     </div>
-    <p class="price-note">※「初回限定」価格は、お一人様1回限りとなります。<br>※交通費等が別途発生する場合があります。詳細はお問い合わせ時にご案内します。<br><a href="guide.html">オプション料金・キャンセルポリシーの詳細はこちら →</a></p>
+    <div class="included">
+      <h3>料金に含まれるもの</h3>
+      <ul>
+        <li>音響機材一式の持参(アンプ・マイク・チューナー・譜面台など)</li>
+        <li>演奏前の打ち合わせ・お見積り</li>
+        <li>演奏に必要な準備・片付け</li>
+        <li>東京都内・川崎市・横浜市への交通費</li>
+      </ul>
+    </div>
+    <p class="price-note">※「初回限定」価格は、お一人様1回限りとなります。<br>※対応エリア外など、交通費が別途発生する場合があります。詳細はお問い合わせ時にご案内します。<br><a href="guide.html">オプション料金・キャンセルポリシーの詳細はこちら →</a></p>
   </div>
 </section>
 
@@ -824,7 +861,8 @@
       <span class="eyebrow" style="color: rgba(255,255,255,0.75);">Contact</span>
       <h2>出張演奏のご相談・お問い合わせ</h2>
       <p>日時・場所・ご希望の演奏内容などを、下記のメールアドレスまでお知らせください。<br>折り返しご連絡いたします。</p>
-      <p style="margin:18px 0 0;font-size:1.15rem;letter-spacing:0.04em;"><a href="mailto:contact@yukifulecare.com?subject=出張フルート演奏のお問い合わせ" style="color:#fff;text-decoration:underline;text-underline-offset:4px;">contact@yukifulecare.com</a></p>
+      <p style="margin:18px 0 0;font-size:1.15rem;letter-spacing:0.04em;"><a href="mailto:contact@yukifulecare.com?subject=%E5%87%BA%E5%BC%B5%E3%83%95%E3%83%AB%E3%83%BC%E3%83%88%E6%BC%94%E5%A5%8F%E3%81%AE%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B&amp;body=%E3%81%94%E5%B8%8C%E6%9C%9B%E3%81%AE%E5%86%85%E5%AE%B9%E3%82%92%E3%81%94%E8%A8%98%E5%85%A5%E3%81%AE%E3%81%86%E3%81%88%E3%80%81%E3%81%9D%E3%81%AE%E3%81%BE%E3%81%BE%E9%80%81%E4%BF%A1%E3%81%97%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82%0A%0A%E2%96%A0%E3%81%8A%E5%90%8D%E5%89%8D%3A%0A%E2%96%A0%E6%96%BD%E8%A8%AD%E3%83%BB%E5%9B%A3%E4%BD%93%E5%90%8D%3A%0A%E2%96%A0%E3%81%94%E5%B8%8C%E6%9C%9B%E3%81%AE%E6%97%A5%E6%99%82%3A%0A%E2%96%A0%E6%BC%94%E5%A5%8F%E5%A0%B4%E6%89%80%28%E4%BD%8F%E6%89%80%29%3A%0A%E2%96%A0%E3%81%94%E5%8F%82%E5%8A%A0%E4%BA%BA%E6%95%B0%28%E7%9B%AE%E5%AE%89%29%3A%0A%E2%96%A0%E3%81%94%E5%B8%8C%E6%9C%9B%E3%81%AE%E6%9B%B2%E3%83%BB%E3%82%B8%E3%83%A3%E3%83%B3%E3%83%AB%3A%0A%E2%96%A0%E3%81%9D%E3%81%AE%E4%BB%96%E3%81%94%E8%A6%81%E6%9C%9B%3A%0A" style="color:#fff;text-decoration:underline;text-underline-offset:4px;">contact@yukifulecare.com</a></p>
+      <p style="margin:10px 0 0;font-size:0.8rem;color:rgba(255,255,255,0.75);">※クリックすると、ご記入用のメール本文が自動で入力されます。</p>
     </div>
   </div>
 </section>
